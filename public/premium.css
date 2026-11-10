@@ -1,0 +1,24 @@
+/* Lenstore premium visual layer — preserves existing application logic. */
+:root{--premium-ink:#172333;--premium-muted:#718096;--premium-line:#e7ecf2;--premium-blue:#426b8d}
+body{background:#f3f6fa!important;color:#1b2938!important;font-family:Inter,"DM Sans",system-ui,sans-serif!important}
+.app-shell{max-width:1900px!important;margin:0 auto!important;padding:18px clamp(10px,2vw,30px)!important}
+.app-header{background:rgba(255,255,255,.94)!important;border:1px solid #e7edf3!important;border-radius:18px!important;box-shadow:0 10px 35px rgba(28,47,68,.07)!important;padding:15px 18px!important;backdrop-filter:blur(16px)!important;animation:premiumDrop .55s ease both}
+.brand-mark{border-radius:12px!important;box-shadow:0 5px 16px #1e3b5520!important}
+.brand-mark-image{position:relative;overflow:hidden;display:grid!important;place-items:center!important;background:linear-gradient(145deg,#dbe6ef,#8ea7bb)!important}
+.brand-mark-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.brand-mark-image span{font-weight:800;color:#183047}.brand-mark-image:not(.brand-mark-fallback) span{opacity:0}
+.brand h1{letter-spacing:-.45px!important}.brand-text span{color:#8492a1!important}
+.page-nav{gap:7px!important}.nav-group{border-radius:12px!important}.nav-toggle,.nav-items button{border-radius:9px!important;transition:background .2s,transform .2s,box-shadow .2s!important}
+.nav-items button:hover{transform:translateX(2px)!important}
+.view{animation:premiumRise .38s ease both}
+.stats,.stat-card,.card,.panel,.section-card,.table-wrap,.modal-box{border-radius:15px!important;box-shadow:0 8px 28px rgba(26,48,70,.055)!important}
+.stats>*{transition:transform .25s,box-shadow .25s!important}.stats>*:hover{transform:translateY(-3px)!important;box-shadow:0 13px 30px rgba(26,48,70,.10)!important}
+button,.btn{transition:transform .18s,box-shadow .18s,filter .18s!important}button:active,.btn:active{transform:scale(.98)!important}
+input,select,textarea{border-radius:9px!important;transition:border-color .2s,box-shadow .2s!important}
+input:focus,select:focus,textarea:focus{outline:none!important;box-shadow:0 0 0 3px rgba(79,129,168,.13)!important}
+table tr{transition:background .16s}table tbody tr:hover{background:rgba(75,119,153,.045)!important}
+.modal-overlay{backdrop-filter:blur(5px)!important}.modal-box{animation:premiumRise .24s ease both!important}
+@keyframes premiumDrop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes premiumRise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.app-shell{padding:8px!important}.app-header{border-radius:13px!important;padding:11px!important}}

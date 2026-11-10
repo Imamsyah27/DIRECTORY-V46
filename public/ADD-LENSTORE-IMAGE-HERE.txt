@@ -1,0 +1,2 @@
+Tambahkan foto/logo Anda ke folder ini dengan nama persis: Lenstore.jpg
+Path: public/Lenstore.jpg
